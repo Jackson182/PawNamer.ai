@@ -145,10 +145,24 @@
                 preview.style.display = 'block';
                 uploadText.style.display = 'none';
             }
-            reader.readAsDataURL(file);
-        }
+            reader.readAsDataURL(file); 
     }
+1,297 tokens
 
+
+
+response = openai.chat.completions.create(
+  model="gpt-4o",
+  messages=[
+    {
+      "role": "user",
+      "content": [
+        {"type": "text", "text": "This is my dog, Max. He's a rescue. Write a short bio for him."},
+        {
+          "type": "image_url",
+          "image_url": {"url": "https://example.com/max_photo.jpg"}
+        }
+print(response.choices[0].message.content)
     function generateName() {
         const personality = document.getElementById('personality').value;
         const result = document.getElementById('result');
