@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawNamer.ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to PawNamer.ai</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Your Pet Name Generator</h2>
+            <p>Click the button below to generate a unique name for your pet!</p>
+            <button id="generateButton">Generate Name</button>
+            <div id="nameDisplay"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 PawNamer.ai</p>
+    </footer>
+    <script>
+        function previewImage() {
+            // Function to preview image if applicable - Placeholder for future functionality
+        }
+        document.getElementById('generateButton').addEventListener('click', function() {
+            const names = ['Fluffy', 'Spot', 'Whiskers', 'Fido'];
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            document.getElementById('nameDisplay').innerText = randomName;
+        });
+    </script>
+</body>
+</html>
